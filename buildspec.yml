@@ -1,0 +1,32 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      android: 29
+      java: corretto8
+      nodejs: 10
+    commands:
+      - pwd
+  pre_build:
+    commands:
+      - echo Pre Build started on `date`
+      - npm --version
+      - npm install -g react-native-cli
+      - yarn
+      - react-native link
+      - cd android
+      - pwd
+      
+  build:
+    commands:
+      - echo Build started on `date`
+      - ./gradlew clean
+      - ./gradlew assembleRelease
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - /app/build/outputs/apk/release/*.apk
+  discard-paths: yes
+{"mode":"full","isActive":false}
