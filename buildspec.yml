@@ -21,6 +21,8 @@ phases:
   build:
     commands:
       - echo Build started on `date`
+      # giving gradlew permission to resolve issue due to app built on windows
+      - chmod +x gradlew
       - ./gradlew clean
       - ./gradlew assembleRelease
   post_build:
@@ -28,5 +30,5 @@ phases:
       - echo Build completed on `date`
 artifacts:
   files:
-    - /app/build/outputs/apk/debug/app-debug.apk
+    - /app/build/outputs/apk/debug/*.apk
   discard-paths: yes
