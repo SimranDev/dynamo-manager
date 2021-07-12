@@ -13,6 +13,7 @@ phases:
       - npm --version
       - npm install -g react-native-cli
       # - yarn
+      - npm install
       - react-native link
       - cd android
       - pwd
