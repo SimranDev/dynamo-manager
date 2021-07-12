@@ -12,7 +12,7 @@ phases:
       - echo Pre Build started on `date`
       - npm --version
       - npm install -g react-native-cli
-      # - yarn
+      - yarn
       - react-native link
       - cd android
       - pwd
