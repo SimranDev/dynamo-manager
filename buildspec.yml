@@ -16,7 +16,7 @@ phases:
       - react-native link
       - cd android
       - pwd
-      
+
   build:
     commands:
       - echo Build started on `date`
@@ -29,4 +29,3 @@ artifacts:
   files:
     - /app/build/outputs/apk/release/*.apk
   discard-paths: yes
-{"mode":"full","isActive":false}
