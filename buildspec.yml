@@ -9,7 +9,7 @@ phases:
       - pwd
   pre_build:
     commands:
-      - echo Pre Build started on `date`
+      - echo Pre Build started
       - npm --version
       - npm install -g react-native-cli
       # - yarn
@@ -20,15 +20,15 @@ phases:
 
   build:
     commands:
-      - echo Build started on `date`
+      - echo Build started
       # giving gradlew permission to resolve issue due to app built on windows
       - chmod +x gradlew
       - ./gradlew clean
       - ./gradlew assembleRelease
   post_build:
     commands:
-      - echo Build completed on `date`
+      - echo Build completed!!! Please find the apk in your S3 bucket
 artifacts:
   files:
-    - /app/build/outputs/apk/debug/*.apk
+    - /app/build/outputs/apk/debug/*
   discard-paths: yes
