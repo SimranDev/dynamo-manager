@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  StatusBar,
-  StyleSheet,
-  FlatList,
-  View,
-  ScrollView,
-} from 'react-native';
+import {SafeAreaView, StatusBar, StyleSheet, ScrollView} from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
 import PostForm from './src/screens/PostForm';
 
@@ -28,11 +21,6 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // paddingTop: StatusBar.currentHeight,
-    // backgroundColor: 'red',
-  },
-  scrollView: {
-    marginHorizontal: 16,
   },
 });
 

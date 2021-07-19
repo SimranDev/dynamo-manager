@@ -30,5 +30,5 @@ phases:
       - echo Build completed!!! Please find the apk in your S3 bucket
 artifacts:
   files:
-    - /app/build/outputs/apk/debug/*
+    - /app/build/outputs/apk/debug/*.apk
   discard-paths: yes
